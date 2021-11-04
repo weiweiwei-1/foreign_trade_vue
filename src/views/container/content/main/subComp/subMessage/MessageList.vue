@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import MessageItem from 'views/container/content/menu/subComp/subMessage/MessageItem'
+    import MessageItem from 'views/container/content/main/subComp/subMessage/MessageItem'
     export default {
         name: "MessageList",
         data() {

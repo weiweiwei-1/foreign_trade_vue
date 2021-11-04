@@ -1,11 +1,23 @@
 <template>
-    <div id="header">头部</div>
+    <div id="header">
+        <my-pic></my-pic>
+        <advertisement></advertisement>
+        <user-information></user-information>
+    </div>
 </template>
 
 <script>
-
+    import MyPic from 'views/container/header/subComp/myPic/MyPic'
+    import Advertisement from 'views/container/header/subComp/advertisement/Advertisement'
+    import UserInformation from 'views/container/header/subComp/userInformation/UserInformation'
     export default {
-        name: "MyHeader"
+        name: "MyHeader",
+        components: {
+            MyPic,
+            Advertisement,
+            UserInformation
+            // LoginRegister
+        }
     }
 </script>
 

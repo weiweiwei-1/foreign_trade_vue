@@ -6,9 +6,9 @@
 </template>
 
 <script>
-    import MessageList from 'views/container/content/menu/subComp/subMessage/MessageList'
+    import MessageList from 'views/container/content/main/subComp/subMessage/MessageList'
     // import MessageContent from 'views/container/content/menu/subComp/subMessage/MessageContent'
-    import BlankContent from 'views/container/content/menu/subComp/subMessage/BlankContent'
+    import BlankContent from 'views/container/content/main/subComp/subMessage/BlankContent'
     export default {
         name: "Message",
         components: {

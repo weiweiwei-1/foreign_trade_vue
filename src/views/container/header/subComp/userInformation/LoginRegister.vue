@@ -1,16 +1,51 @@
-<template>
-    <div id="login-block">
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+    <div id="login-block" @click="closeWindow" v-if="bankSwitch === true">
         <div id="login-box">
-            <div id="login-center">
-                
+            <div id="login-center" ref="center">
+                <nav-bar>
+                    <template v-slot:register>
+                        注册
+                    </template>
+                    <template v-slot:login>
+                        登录
+                    </template>
+                    <template v-slot:forget-password>
+                        忘记密码
+                    </template>
+                </nav-bar>
+                <router-view name="login"></router-view>
+                <router-view name="register"></router-view>
+                <router-view name="forgetpassword"></router-view>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import NavBar from 'views/container/header/subComp/userInformation/bar/NavBar'
     export default {
-        name: "LoginRegister"
+        name: "LoginRegister",
+        components: {
+            NavBar
+        },
+        props: {
+            bankSwitch: {
+                type: Boolean,
+                required: true,
+                default: false
+            }
+        },
+        methods: {
+            closeWindow(e) {
+                if (this.$refs.center && !this.$refs.center.contains(e.target)) {
+                    if (this.bankSwitch === true) {
+                        this.$parent.bankSwitch = false
+                    }
+
+                }
+            }
+        }
+
     }
 </script>
 
@@ -18,7 +53,7 @@
     #login-block {
         position: absolute;
         z-index: 1001;
-        display: flex;
+        display: -webkit-box;
         width: 100%;
         height: 100%;
         top: 0;
