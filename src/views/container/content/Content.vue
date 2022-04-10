@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import Menu from 'views/container/content/menu/LeftMenu'
+   /* import Menu from 'views/container/content/menu/LeftMenu'
     import Main from 'views/container/content/main/MyMain'
     import SideBar from 'views/container/content/sidebar/SideBar'
     export default {
@@ -17,7 +17,7 @@
             Main,
             SideBar
         }
-    }
+    }*/
 </script>
 
 <style scoped>

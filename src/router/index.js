@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const Market = () => import('views/container/content/main/subComp/Market');
-const Message = () => import('views/container/content/main/subComp/Message');
-const Quote = () => import('views/container/content/main/subComp/Quote');
-const Friend = () => import('views/container/content/main/subComp/Friend');
-const Suggestion = () => import('views/container/content/main/subComp/Suggestion');
-const MessageContent = () => import('views/container/content/main/subComp/subMessage/MessageContent');
-const BlankContent = () => import('views/container/content/main/subComp/subMessage/BlankContent');
-const Register = () => import('views/container/header/subComp/userInformation/register/Register');
-const Login = () => import('views/container/header/subComp/userInformation/login/Login');
-const ForgetPassword = () => import('views/container/header/subComp/userInformation/forgetPassword/ForgetPassword');
+const Market = () => import('views/fa/content/market/Market.vue');
+const Message = () => import('views/fa/content/message/Message.vue');
+const Quote = () => import('views/fa/content/quote/Quote.vue');
+const Friend = () => import('views/fa/content/friend/Friend.vue');
+const Suggestion = () => import('views/fa/content/suggestions/Suggestion.vue');
+const MessageContent = () => import('views/fa/content/message/MessageContent.vue');
+const BlankContent = () => import('views/fa/content/message/BlankContent.vue');
+const Register = () => import('views/fa/head/user/Register.vue');
+const Login = () => import('views/fa/head/user/Login.vue');
+const ForgetPassword = () => import('views/fa/head/user/ForgetPassword.vue');
 
 const routes = [
     //主路由
@@ -55,8 +55,15 @@ const routes = [
         path: '/fa/register',
         name: 'Register',
         components: {
+            // default: Register,
             register: Register
         },
+        meta: {
+            /*title: "注册",
+            fullPath: "/fa/register",*/
+            keepAlive: true,
+            isBack: false
+        }
     },
 
     //登录路由
@@ -64,8 +71,13 @@ const routes = [
         path: '/fa/login',
         name: 'Login',
         components: {
+            // default: Login,
             login: Login
         },
+        meta: {
+            title: "登录",
+            keepAlive: true
+        }
     },
 
     //重置密码路由
@@ -73,8 +85,13 @@ const routes = [
         path: '/fa/forget-password',
         name: 'ForgetPassword',
         components: {
+            // default: ForgetPassword,
             forgetpassword: ForgetPassword
         },
+        meta: {
+            title: "重置密码",
+            keepAlive: true
+        }
     },
     //子路由的嵌套路由
     {

@@ -1,11 +1,9 @@
 import {request} from "./request";
 
-export function getHomeAllData() {
+export function getHomeProductList(params) {
     return request({
-        url: '/productinformation/list',
+        url: 'fa/product/list',
+        method: 'get',
+        params
     })
-}
-
-export function getBanner() {
-    
 }

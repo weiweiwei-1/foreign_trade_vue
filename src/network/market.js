@@ -2,6 +2,6 @@ import {request} from "./request";
 
 export function getMarketList() {
     request({
-        url:'/fts/market'
+        // url:'/fts/market'
     })
 }

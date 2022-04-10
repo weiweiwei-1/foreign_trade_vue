@@ -1,12 +1,12 @@
 <template>
-    <container></container>
+    <home></home>
 </template>
 <script>
-    import container from 'views/container/Container'
+    import Home from 'views/Home.vue'
     export default {
         name: 'App',
         components: {
-            container
+            Home
         }
     }
 
