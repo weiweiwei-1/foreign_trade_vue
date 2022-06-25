@@ -1,11 +1,11 @@
 <template>
-    
+$END$
 </template>
 
 <script>
-    export default {
-        name: "FriendSearch"
-    }
+export default {
+name: "Suggestions"
+}
 </script>
 
 <style scoped>
